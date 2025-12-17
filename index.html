@@ -30,7 +30,21 @@
 
     h1 {
       font-size: 42px;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
+    }
+
+    /* 🎂 Bánh kem */
+    .cake {
+      font-size: 90px;
+      margin: 10px 0 20px;
+      animation: cakeBounce 2s ease-in-out infinite;
+      text-shadow: 0 0 20px rgba(255,255,255,0.6);
+    }
+
+    @keyframes cakeBounce {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+      100% { transform: scale(1); }
     }
 
     p {
@@ -72,7 +86,9 @@
 <body>
 
   <div class="card">
-    <h1>🎉 Em gái của anh sinh nhật dui dẻ🎉</h1>
+    <h1>🎉 Em gái của anh sinh nhật dui dẻ 🎉</h1>
+
+    <div class="cake">🎂</div>
 
     <p>
       Chúc em luôn rạng rỡ như nụ cười hôm nay, sống thật hạnh phúc và bình an
@@ -82,12 +98,12 @@
       và ủng hộ em. Chúc em tuổi mới thật nhiều niềm vui, yêu thương và thành công.
     </p>
 
-    <div class="icons">🎂 🎁 🎈</div>
+    <div class="icons">🎁 🎈 💖</div>
   </div>
 
   <script>
     const flowers = ["🌸", "🌺", "🌷", "💮"];
-    const flowerCount = 25;
+    const flowerCount = 30;
 
     for (let i = 0; i < flowerCount; i++) {
       const flower = document.createElement("div");
