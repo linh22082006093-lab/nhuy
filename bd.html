@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday 🎂</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: white;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .card {
+      max-width: 600px;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      padding: 45px 40px;
+      border-radius: 25px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      animation: float 3s ease-in-out infinite;
+      z-index: 10;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .icons {
+      font-size: 28px;
+      margin-top: 25px;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* 🌸 Hoa rơi */
+    .flower {
+      position: absolute;
+      top: -50px;
+      font-size: 24px;
+      animation: fall linear infinite;
+      opacity: 0.9;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-50px) rotate(0deg);
+      }
+      100% {
+        transform: translateY(110vh) rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>🎉 Em gái của anh sinh nhật dui dẻ🎉</h1>
+
+    <p>
+      Chúc em luôn rạng rỡ như nụ cười hôm nay, sống thật hạnh phúc và bình an
+      trong từng khoảnh khắc. Mong mọi điều tốt đẹp nhất sẽ luôn ở bên em,
+      những ước mơ ấp ủ sớm ngày thành hiện thực.<br><br>
+      Dù có chuyện gì xảy ra, hãy nhớ rằng luôn có gia đình ở bên yêu thương
+      và ủng hộ em. Chúc em tuổi mới thật nhiều niềm vui, yêu thương và thành công.
+    </p>
+
+    <div class="icons">🎂 🎁 🎈</div>
+  </div>
+
+  <script>
+    const flowers = ["🌸", "🌺", "🌷", "💮"];
+    const flowerCount = 25;
+
+    for (let i = 0; i < flowerCount; i++) {
+      const flower = document.createElement("div");
+      flower.className = "flower";
+      flower.innerText = flowers[Math.floor(Math.random() * flowers.length)];
+
+      flower.style.left = Math.random() * 100 + "vw";
+      flower.style.animationDuration = 5 + Math.random() * 5 + "s";
+      flower.style.fontSize = 18 + Math.random() * 18 + "px";
+
+      document.body.appendChild(flower);
+    }
+  </script>
+
+</body>
+</html>
